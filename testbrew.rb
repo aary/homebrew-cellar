@@ -21,6 +21,7 @@ class Testbrew < Formula
            "-Wvla",
            "test.cpp",
            "-o testbrew"
+    system "false"
 
     cp(path, "testbrew", :preserve => true)
     ohai("Done!")
