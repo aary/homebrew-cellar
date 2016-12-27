@@ -22,7 +22,7 @@ class Testbrew < Formula
            "test.cpp",
            "-o testbrew"
 
-    cp(path, "testbrew", :preserve => true)
+    bin.install "testbrew"
     ohai("Done!")
   end
 end
