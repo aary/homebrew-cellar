@@ -1,7 +1,3 @@
-# Documentation: https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
-#                http://www.rubydoc.info/github/Homebrew/brew/master/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-
 class Testbrew < Formula
   desc ""
   homepage ""
