@@ -7,21 +7,22 @@ class Testbrew < Formula
   def install
     # system "make"
     # system("g++ -std=c++14 -O3 test.cpp -o testbrew")
-    system "brew", "install", "--HEAD", "facebook/fb/buck"
+    # system "brew", "install", "--HEAD", "facebook/fb/buck"
     system "git", "submodule", "update", "--init", "--recursive"
-    system "buck", "build", "testbrew"
-    # system "g++", "-std=c++14",
-           # "-O3",
-           # "-Wall",
-           # "-Werror",
-           # "-Wextra",
-           # "-pedantic",
-           # "-Wvla",
-           # "test.cpp",
-           # "test-submodule/something.cpp",
-           # "-o",
-           # "testbrew"
-    bin.install "buck-out/gen/testbrew/testbrew"
+    # system "buck", "build", "testbrew"
+    system "g++", "-std=c++14",
+           "-O3",
+           "-Wall",
+           "-Werror",
+           "-Wextra",
+           "-pedantic",
+           "-Wvla",
+           "testbrew/test.cpp",
+           "testbrew/test-submodule/something.cpp",
+           "-o",
+           "testbrew"
+    bin.install "testbrew"
+    # bin.install "buck-out/gen/testbrew/testbrew"
     ohai("Done!")
   end
 end
