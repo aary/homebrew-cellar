@@ -9,6 +9,7 @@ class Testbrew < Formula
   def install
     # system "make"
     # system("g++ -std=c++14 -O3 test.cpp -o testbrew")
+    system "git", "submodule", "update", "--init", "--recursive"
     system "g++", "-std=c++14",
            "-O3",
            "-Wall",
