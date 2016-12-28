@@ -7,7 +7,6 @@ class Testbrew < Formula
   sha256 "ebea9210ed5548b0a11cd2c0aed28788d4306e8ad5f772400e64e5f4fbc2d11b"
 
   def install
-    ohai("Building vader")
     # system "make"
     # system("g++ -std=c++14 -O3 test.cpp -o testbrew")
     system "g++", "-std=c++14",
@@ -18,7 +17,8 @@ class Testbrew < Formula
            "-pedantic",
            "-Wvla",
            "test.cpp",
-           "-o testbrew"
+           "-o",
+           "testbrew"
     bin.install "testbrew"
     ohai("Done!")
   end
