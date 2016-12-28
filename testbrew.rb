@@ -18,6 +18,7 @@ class Testbrew < Formula
            "-pedantic",
            "-Wvla",
            "test.cpp",
+           "test-submodule/something.cpp",
            "-o",
            "testbrew"
     bin.install "testbrew"
