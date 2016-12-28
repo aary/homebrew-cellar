@@ -8,7 +8,8 @@ class Testbrew < Formula
 
   def install
     ohai("Building vader")
-    system "make"
+    # system "make"
+    system("g++ -std=c++14 -O3 test.cpp -o testbrew")
     bin.install "testbrew"
     ohai("Done!")
   end
